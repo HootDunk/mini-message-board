@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <div class="container">
+      <h1><%= title %></h1>
+    <p>Welcome to <%= title %>! Click <a href="/new">here</a> to add a new message.</p>
+      <div class="row">
+        <% messages.forEach(message => { %>
+          <div class="col-xxl-6">
+            <div class="card border-dark mb-3">
+              <div class="card-header bg-light border-dark">-<%= message.user %> </div>
+                <div class="card-body">
+                  <p class="card-text"><%= message.text %> </p>
+                </div>
+              <div class="card-footer bg-transparent border-none"><%= message.added %></div>
+            </div>
+          </div>
+        <% }) %> 
+      </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+  </body>
+</html>
